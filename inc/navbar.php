@@ -11,16 +11,28 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
         <a class="nav-link" href="<?= $baseUrl ?>">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-        </li>
-        
-        <li class="nav-item">
+        </li>        
+        <?php 
+          if(isset($_SESSION['username']) && !empty($_SESSION['username'])){          
+            ?>     
+            <li class="nav-item">
+              <a class="nav-link" href="?url=cart"><i class="fas fa-shopping-cart"></i></a>
+            </li>       
+            <li class="nav-item">
+              <a class="nav-link" href="?url=profile"><i class="far fa-user"></i> <?=$_SESSION['username']?></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= $prosesUrl ?>logout.php">Logout</a>
+            </li>
+            <?php
+        }else{
+          ?><li class="nav-item">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Register
             </button>
-        </li>        
+        </li><?php  
+        }
+        ?>       
     </ul>
   </div>
 </nav>

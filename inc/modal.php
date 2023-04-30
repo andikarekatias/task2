@@ -38,7 +38,7 @@
                 </form>
                 </div>
                 <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                <form action="/action_page.php" method="post" class="my-1">
+                <form action="proses/login.php" method="post" class="my-1">
                 <p>Insert username and password to Login</p>
                     <div class="form-group">
                         <label for="username">Username :</label>

@@ -2,7 +2,7 @@
 require_once('koneksi.php');
 class User{
     public $koneksi;
-    private $id_u;
+    private $id_user;
     private $username;
     private $password;
     private $role;
